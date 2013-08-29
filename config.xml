@@ -9,7 +9,7 @@ version = "1.0.0">
   <author href="http://ww.com"
   email="bitmind">bitmind</author>
     
-    
+  <icon src="logo.gif" />
  <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
     
   <gap:platforms>
