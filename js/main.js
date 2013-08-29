@@ -1,7 +1,7 @@
 var app = {
 
     initialize: function() {
-        alert('Welcome HHBA');
+        alert('Hello World HHBA!!');
     }
 
 };
