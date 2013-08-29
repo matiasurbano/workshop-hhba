@@ -1,5 +1,7 @@
 <html>
-    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
     <body>
         
 
@@ -19,7 +21,7 @@
 <!--        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">-->
         <link href="css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 <!--        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
-<!--        <link href="css/font-awesome.css" rel="stylesheet">-->
+        <link href="css/font-awesome.css" rel="stylesheet">
         <!-- jquery / zepto -->
 <!--        <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>-->
         <script src="js/zepto.min.js"></script>
@@ -52,6 +54,25 @@
                 font-weight:bold;
                 background-color: yellow
             }
+
+            body{
+                padding: 0;
+                margin: 0;
+            }
+
+            html, body, #map {
+                height: 100%;
+            }
+
+
+            @media (max-width: 767px){
+                body{
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
+            }
+
+
         </style>
         
         
@@ -59,11 +80,18 @@
             <div class="navbar-inner">
                 <form class="form-search navbar-search" id="search-form">
                     <div class="input-append">
-                        <input type="text" class="search-query" placeholder="Buscar" id='filtro' />
+                        <input type="text" class="search-query" placeholder="Buscar" id='filtro' style="
+                            height: 30px;
+                            line-height: 19px;
+                            width: 80%;
+                            margin-bottom: 10px;
+                        "/>
                         <button class="btn" type="submit">Buscar</button>
                     </div>
-                </form>&nbsp;&nbsp;
-                <div class="btn-group" data-toggle="buttons-checkbox">
+                </form>
+
+
+                <div class="btn-group" data-toggle="buttons-checkbox" style="float:right;  margin-left:20px;">
                     <a class="btn tipo_check" href="#" title="Espacios Culturales">
                         <i class="icon-picture"></i>
                     </a>
@@ -76,11 +104,11 @@
                     <a class="btn tipo_check" href="#" title="Patrimonio">
                         <i class="icon-info-sign"></i>
                     </a>
-                </div>&nbsp;&nbsp;
-                <div class="btn-group" data-toggle="buttons-checkbox">
                     <a class="btn sub_tipo_check active act" href="#" title="Salas de Cine, Espacios INCAA">
                         <i class="icon-film"></i>
                     </a>
+                </div>
+                <div class="btn-group" data-toggle="buttons-checkbox" style="float:right; margin-left:20px; margin-button:20px;">
                     <a class="btn sub_tipo_check" href="#" title="Salas teatrales">
                         <i class="icon-group"></i>
                     </a>
@@ -93,14 +121,13 @@
                     <a class="btn sub_tipo_check" href="#" title="Radios">
                         <i class="icon-microphone"></i>
                     </a>
-                </div>&nbsp;&nbsp;
-                <div class="btn-group" data-toggle="buttons-checkbox">
                     <a class="btn cluster_check active act" href="#">
                         <i class="icon-cogs"></i>
                     </a>
                 </div>
+                <br>
             </div>
-            <div id='map' class='map' style='height: 641px; position: relative; overflow: hidden;'></div>
+            <div id='map' class='map' ></div>
         </div>
         
         <script src="js/main.js"></script>
