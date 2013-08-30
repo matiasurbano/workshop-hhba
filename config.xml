@@ -4,12 +4,12 @@ xmlns:gap = "http://phonegap.com/ns/1.0"
 id = "com.phonegapessentials.ex192"
 version = "1.0.0">
 
-  <name>hhba</name>
-  <description>hhba example</description>
+  <name>HackHackersBA Media Party 2013</name>
+  <description>HackHackersBA Media Party 2013</description>
   <author href="http://ww.com"
   email="bitmind">bitmind</author>
     
-  <icon src="logo.gif" />
+  <icon src="logo.png" />
  <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
     
   <gap:platforms>
