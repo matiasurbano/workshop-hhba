@@ -65,33 +65,88 @@
             }
 
 
+
+            .header-menu{
+                position: absolute;
+                top: 10px;
+            }
+
+            .search-bar{
+                position: relative;
+                padding: 0px 50px;
+                z-index: 999;
+                line-height: 40px;
+            }
+
+            .search-query#filtro{
+                height: 30px;
+                line-height: 19px;
+                width: 80%;
+                margin-bottom: 10px;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                border-radius: 0px;
+            }
+
+            #search-query-btn{
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                border-radius: 0px;
+                margin-right: 10px;
+            }
+
+            #btngroup1{
+                 float:right;  
+                 margin-left:10px;
+            }
+
+
+            #btngroup2{
+                float:right; 
+                margin-left:40px;
+            }
+
+
+
+
             @media (max-width: 767px){
                 body{
                     padding-left: 0px;
                     padding-right: 0px;
                 }
+
+                i{
+                    font-size: 20px;
+                }
+
+
+                #btngroup1{
+                    margin: 0 auto;
+                    padding: 0px;
+                }
+
+                #btngroup2{
+                    margin: 0 auto;
+                    padding: 0px;
+                }
+
             }
 
 
         </style>
         
         
-        <div class="navbar">
-            <div class="navbar-inner">
+        <div class="header-menu">
+            <div class="search-bar">
                 <form class="form-search navbar-search" id="search-form">
                     <div class="input-append">
-                        <input type="text" class="search-query" placeholder="Buscar" id='filtro' style="
-                            height: 30px;
-                            line-height: 19px;
-                            width: 80%;
-                            margin-bottom: 10px;
-                        "/>
-                        <button class="btn" type="submit">Buscar</button>
+                        <input type="text" class="search-query" placeholder="Buscar" id='filtro'/>
+                        <button id="search-query-btn" class="btn" type="submit">Buscar</button>
                     </div>
                 </form>
 
 
-                <div class="btn-group" data-toggle="buttons-checkbox" style="float:right;  margin-left:20px;">
+                <div id="btngroup1" class="btn-group" data-toggle="buttons-checkbox">
                     <a class="btn tipo_check" href="#" title="Espacios Culturales">
                         <i class="icon-picture"></i>
                     </a>
@@ -108,7 +163,7 @@
                         <i class="icon-film"></i>
                     </a>
                 </div>
-                <div class="btn-group" data-toggle="buttons-checkbox" style="float:right; margin-left:20px; margin-button:20px;">
+                <div id="btngroup2" class="btn-group" data-toggle="buttons-checkbox">
                     <a class="btn sub_tipo_check" href="#" title="Salas teatrales">
                         <i class="icon-group"></i>
                     </a>
@@ -127,9 +182,11 @@
                 </div>
                 <br>
             </div>
-            <div id='map' class='map' ></div>
+
         </div>
-        
+        <div style="clear:both;">
+            <div id='map' class='map'></div>
+        </div>
         <script src="js/main.js"></script>
     </body>
     <script>
